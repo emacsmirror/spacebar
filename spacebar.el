@@ -454,7 +454,7 @@ If it does not exist, creates it, switches to it, and initializes it
 
         (with-eval-after-load 'projectile
           (defadvice projectile-kill-buffers
-              (after close-projectile-spacebar activate)
+              (before close-projectile-spacebar activate)
             "Close space when projectile project is closed."
             (spacebar-close))))
     (message "spacebar: projectile is not installed")))
